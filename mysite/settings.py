@@ -37,17 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
-    'accounts',
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    'widget_tweaks',
+    'app', 
+    'accounts', 
+    'django.contrib.sites', 
+    'allauth', 
+    'allauth.account', 
+    'allauth.socialaccount'
 ]
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
-ACCOUNT_LOGOUT_REDIRECT = '/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [

@@ -1,7 +1,7 @@
 from django.views import View
 from django.shortcuts import render, redirect
 from accounts.models import CustomUser
-from accounts.forms import ProfileForm
+from accounts.forms import ProfileForm, SignupUserForm
 from allauth.account import views
 
 
@@ -53,3 +53,8 @@ class LogoutView(views.LogoutView):
         if request.user.is_authenticated:
             self.logout()
         return redirect('/')
+
+class SignupView(views.SignupView):
+    template_name = 'accounts/signup.html'
+    form_class = SignupUserForm
+    
